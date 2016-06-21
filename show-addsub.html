@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>视秀频道后台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link rel="shortcut icon" href="show.ico">
+<link rel="Bookmark" href="show.ico">
+<link rel="stylesheet" type="text/css" href="../css/leftmenu.css" />
+<link rel="stylesheet" type="text/css" href="../css/show.css" />
+</head>
+
+<body>
+<div id="container" class="page-container effect mainnav-lg">
+<div class="mainnav-sub">
+	</div>
+	
+    <div class="content-container has-subnav">
+        <div class="page-container-wrap">
+            <div class="page-con">
+                <iframe id="conPage" src="page/page-setup.html" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="1200"></iframe>
+            </div>
+        </div>
+       
+    </div>
+	
+</div>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript">
+   $(".mainnav li .menuPopover").click(function(){
+        $("#conPage").attr("src",$(this).attr("_href"));
+        $(".mainnav li").removeClass("active");
+        $(this).parent("li").addClass("active");
+    });
+</script>
+
+</body>
+</html>
